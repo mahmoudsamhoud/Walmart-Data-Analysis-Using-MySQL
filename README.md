@@ -1,5 +1,5 @@
 # Walmart-Data-Analysis-Using-MySQL
-![image](https://github.com/mahmoudsamhoud/Walmart-Data-Analysis-Using-MySQL/assets/78819528/384845da-a926-4f13-83cc-c892d3f83800)
+![image](https://github.com/mahmoudsamhoud/Walmart-Data-Analysis-Using-MySQL/assets/78819528/f46e3c18-ed7d-4b13-a8b4-e26b2b18da95)
 ## Introduction
 Walmart Inc. is an American multinational retail corporation that operates a chain of hypermarkets, discount department stores, and grocery stores around the world.
 The dataset was obtained from the [Kaggle Walmart Sales Forecasting Competition](https://www.kaggle.com/c/walmart-recruiting-store-sales-forecasting).
@@ -30,3 +30,14 @@ This dataset contains sales transactions from Walmart branches located in differ
 | gross_income            | Gross Income                               | DECIMAL(15, 5) |
 | rating                  | Rating on scale from 1-10                  | FLOAT(2, 1)    |
 
+## Performed Analyses
+  Three categories of analyses were performed:
+   - Product Analysis
+   - Sales Analysis
+   - Customer Analysis
+## Questions To Be Answered
+### General questions
+   - How many cities is Walmart located in?
+   - How many branches are in each city?
+   - What are the types of branches for each city?
+### 
