@@ -25,7 +25,7 @@ This dataset contains sales transactions from Walmart branches located in differ
 | date                    | The date on which the purchase was made    | DATE           |
 | time                    | The time at which the purchase was made    | TIME           |
 | payment                 | Payment Method (cash, credit card, etc..   | VARCHAR(15)    |
-| cogs                    | Cost Of Goods sold                         | DECIMAL(10, 2) |
+| cogs                    | Cost Of Goods sold Without Tax             | DECIMAL(10, 2) |
 | gross_margin_percentage | Gross margin percentage                    | FLOAT(15, 10)  |
 | gross_income            | Gross Income                               | DECIMAL(15, 5) |
 | rating                  | Rating on scale from 1-10                  | FLOAT(2, 1)    |
@@ -40,4 +40,36 @@ This dataset contains sales transactions from Walmart branches located in differ
    - How many cities is Walmart located in?
    - How many branches are in each city?
    - What are the types of branches for each city?
-### 
+### Product Related Questions
+  - How many unique product categories does the data have?
+  - What is the most selling product category?
+  - What product line has the largest Tax?
+  - What is the most common product line by gender?
+  - What is the average rating of each product line?
+    
+### Sales Related Questions
+  - What is the most common payment method?
+  - What is the total revenue by month?
+  - What month had the largest COGS?
+  - What product line had the largest revenue?
+  - What is the city with the largest revenue?
+  - Which branch sold more products than average product sold
+  - Number of sales made in each time of the day per weekday
+  - Which of the customer types brings the most revenue?
+  - Which city has the largest tax percent/ VAT (Value Added Tax)?
+  - Which customer type pays the most in VAT?
+    
+### Customer Related Questions
+  - How many unique customer types does the data have?
+  - How many unique payment methods does the data have?
+  - What is the most common customer type?
+  - Which customer type buys the most?
+  - What is the gender of most of the customers?
+  - What is the gender distribution per branch?
+  - Which time of the day do customers give most ratings?
+  - Which time of the day do customers give most ratings per branch?
+  - Which day fo the week has the best avg ratings?
+  - Which day of the week has the best average ratings per branch?
+
+
+
