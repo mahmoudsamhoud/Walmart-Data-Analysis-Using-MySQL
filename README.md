@@ -12,21 +12,21 @@ This project aims to explore Walmart Sales data in order to get insights into di
 This dataset contains sales transactions from Walmart branches located in different cities of MaynmarThe data contains 17 columns and 1000 rows:
 | Column                  | Description                                | Data Type      |
 | :---------------------- | :----------------------------------------- | :------------- |
-| invoice_id              | Invoice of the sales made                  | VARCHAR(30)    |
+| invoice_id              | Invoice of the sales made                  | VARCHAR(20)    |
 | branch                  | Branch at which sales were made            | VARCHAR(5)     |
 | city                    | The location of the branch                 | VARCHAR(30)    |
-| customer_type           | Custome membership (member or normal)      | VARCHAR(30)    |
+| customer_type           | Custome membership (member or normal)      | VARCHAR(10)    |
 | gender                  | Gender of the customer                     | VARCHAR(10)    |
-| product_line            | Product Category                           | VARCHAR(100)   |
+| product_line            | Product Category                           | VARCHAR(50)    |
 | unit_price              | price of one unit of the product           | DECIMAL(10, 2) |
 | quantity                | The quantity of the sold product           | INT            |
-| tax                     | The amount of tax on the purchase          | FLOAT(6, 4)    |
-| total                   | The total cost of the purchase             | DECIMAL(10, 2) |
+| tax                     | The amount of tax on the purchase          | FLOAT(6, 3)    |
+| total                   | The total cost of the purchase             | DECIMAL(12, 4) |
 | date                    | The date on which the purchase was made    | DATE           |
-| time                    | The time at which the purchase was made    | TIMESTAMP      |
-| payment                 | Payment Method (cash, credit card, etc..   | DECIMAL(10, 2) |
+| time                    | The time at which the purchase was made    | TIME           |
+| payment                 | Payment Method (cash, credit card, etc..   | VARCHAR(15)    |
 | cogs                    | Cost Of Goods sold                         | DECIMAL(10, 2) |
-| gross_margin_percentage | Gross margin percentage                    | FLOAT(11, 9)   |
-| gross_income            | Gross Income                               | DECIMAL(10, 2) |
+| gross_margin_percentage | Gross margin percentage                    | FLOAT(15, 10)  |
+| gross_income            | Gross Income                               | DECIMAL(15, 5) |
 | rating                  | Rating on scale from 1-10                  | FLOAT(2, 1)    |
 
