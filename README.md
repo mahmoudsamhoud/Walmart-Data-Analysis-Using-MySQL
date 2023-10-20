@@ -30,6 +30,7 @@ This dataset contains sales transactions from Walmart branches located in differ
 | gross_income            | Gross Income                               | DECIMAL(15, 5) |
 | rating                  | Rating on scale from 1-10                  | FLOAT(2, 1)    |
 
+Check the [WalmartSalesData.csv](https://github.com/mahmoudsamhoud/Walmart-Data-Analysis-Using-MySQL/blob/main/WalmartSalesData.csv) file.
 ## Performed Analyses
   Three categories of analyses were performed:
    - Product Analysis
@@ -83,7 +84,87 @@ This dataset contains sales transactions from Walmart branches located in differ
 #### 3 - Exploratory Data Analysis (EDA) stage in which the listed questions above were answered.
 
 
+## Each question asked above is answered by a query in the SQL file
 
+## Code Sample
+Check the [walmart.SQL](https://github.com/mahmoudsamhoud/Walmart-Data-Analysis-Using-MySQL/blob/main/walmart.sql) file for the rest of the code.
+  ```sql
+CREATE DATABASE IF NOT EXISTS WalmartSales;
+CREATE TABLE IF NOT EXISTS Sales_data(
+	invoice_id VARCHAR(20) NOT NULL primary KEY,
+    branch VARCHAR(5) NOT NULL,
+    city VARCHAR(30) NOT NULL, 
+    cust_type VARCHAR(10) NOT NULL,
+    gender VARCHAR(10) NOT NULL, 
+    product_line VARCHAR (50) NOT NULL,
+    unit_price DECIMAL (10,2) NOT NULL,
+    quantity INT NOT NULL,
+    tax FLOAT (6,3) NOT NULL,
+    total DECIMAL (12,4) NOT NULL,
+    date DATETIME NOT NULL,
+    time TIME NOT NULL,
+    payment_method VARCHAR(15) NOT NULL,
+    cogs DECIMAL (10,2) NOT NULL,
+    gross_margin_pct FLOAT(15,10)NOT NULL,
+    gross_income DECIMAL (15, 5) NOT NULL,
+    rating FLOAT (2, 1) NOT NULL
+    );
+    
+    -- A csv file were imported to fill the sales_data table created above
+    -- Each column of the csv file was assigned to its corresponding column in sales_data
+    -- We are sure that there are no null values in our table
+    -- because of the way we created each column
+    
+    
+    -- ---------------------------------------------------------------------
+    -- ---------------------- Feature Engineering --------------------------
+    
+    
+    -- Adding the day_time column which identifies 
+	-- each interval of the day (morning, afternoon, evening, and night )
+    
+    Select 
+		time,
+        (CASE 
+			WHEN `time` BETWEEN "04:00:00" AND "12:00:00" THEN "Morning"
+            WHEN `time` BETWEEN "12:01:00" AND "17:00:00" THEN "Afternoon"
+            WHEN `time` BETWEEN "17:01:00" AND "21:00:00" THEN "Evening"
+            ELSE "Night"
+        END) AS day_time
+		FROM sales_data;
+        
+	ALTER TABLE sales_data ADD COLUMN day_time VARCHAR(15);
+    
+    UPDATE sales_data 
+    set day_time = (CASE 
+			WHEN `time` BETWEEN "04:00:00" AND "12:00:00" THEN "Morning"
+            WHEN `time` BETWEEN "12:01:00" AND "17:00:00" THEN "Afternoon"
+            WHEN `time` BETWEEN "17:01:00" AND "21:00:00" THEN "Evening"
+            ELSE "Night"
+        END
+    );
+    
+    -- Adding the day_name column to identify each day of the week
+    
+    SELECT
+		date,
+        DAYNAME(date) AS day_name
+        FROM sales_data;
+	ALTER TABLE sales_data ADD COLUMN day_name VARCHAR(10);
+    UPDATE sales_data
+    set day_name = DAYNAME(date);
+    
+-- Adding month_name column to identify each month of the year
+
+    SELECT
+		date,
+        MONTHNAME(date) AS month_name
+        FROM sales_data;
+	
+    ALTER TABLE sales_data ADD COLUMN month_name VARCHAR(10);
+    UPDATE sales_data
+    set month_name = MONTHNAME(date);
+```
 
   
   
