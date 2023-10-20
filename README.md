@@ -48,7 +48,6 @@ This dataset contains sales transactions from Walmart branches located in differ
   - What is the average rating of each product line?
     
 ### Sales-Related Questions
-  - What is the most common payment method?
   - What is the total revenue by month?
   - What month had the largest COGS?
   - What product line had the largest revenue?
@@ -60,6 +59,7 @@ This dataset contains sales transactions from Walmart branches located in differ
   - Which customer type pays the most in VAT?
     
 ### Customer-Related Questions
+  - What is the most common payment method?
   - How many unique customer types does the data have?
   - How many unique payment methods does the data have?
   - What is the most common customer type?
