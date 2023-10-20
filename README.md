@@ -47,29 +47,47 @@ This dataset contains sales transactions from Walmart branches located in differ
   - What is the most common product line by gender?
   - What is the average rating of each product line?
     
-### Sales Related Questions
+### Sales-Related Questions
   - What is the most common payment method?
   - What is the total revenue by month?
   - What month had the largest COGS?
   - What product line had the largest revenue?
   - What is the city with the largest revenue?
-  - Which branch sold more products than average product sold
-  - Number of sales made in each time of the day per weekday
+  - Which branch sold more products than the average product sold
+  - Number of sales made at each time of the day per weekday
   - Which of the customer types brings the most revenue?
-  - Which city has the largest tax percent/ VAT (Value Added Tax)?
+  - Which city has the largest tax percentage/ VAT (Value Added Tax)?
   - Which customer type pays the most in VAT?
     
-### Customer Related Questions
+### Customer-Related Questions
   - How many unique customer types does the data have?
   - How many unique payment methods does the data have?
   - What is the most common customer type?
   - Which customer type buys the most?
   - What is the gender of most of the customers?
   - What is the gender distribution per branch?
-  - Which time of the day do customers give most ratings?
-  - Which time of the day do customers give most ratings per branch?
-  - Which day fo the week has the best avg ratings?
+  - Which time of the day do customers give the most ratings?
+  - Which time of the day do customers give the most ratings per branch?
+  - Which day of the week has the best average ratings?
   - Which day of the week has the best average ratings per branch?
+
+## Analysis Approach
+#### 1 -  Data Wrangling stage in which the following steps were made:
+  - A database was created 
+  - A table was created to contain the data
+  - The data was imported from the provided CSV file
+  - The data was checked and no null values were found.
+    
+#### 2 -  Feature Engineering stage in which some calculated fields were added to the dataset to help answer more questions and get the most out of the data.
+
+#### 3 - Exploratory Data Analysis (EDA) stage in which the listed questions above were answered.
+
+
+
+
+  
+  
+    
 
 
 
